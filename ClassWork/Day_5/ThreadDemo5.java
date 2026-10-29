@@ -1,0 +1,27 @@
+class Demo extends Thread
+{
+    public void run()
+    {
+        System.out.println("Thread is running.....");
+    }
+}
+class ThreadDemo5
+{
+    public static void main(String A[])
+
+    {
+        System.out.println("Inside main thread");
+
+        Demo dobj1 = new Demo();
+        Demo dobj2 = new Demo();           // here the thread objects create automatically beacuse the thread is parrent class of demo  class
+
+
+
+        dobj1.start();
+        dobj2.start();                      // in this code there are three threads two is created and one is main thread which is invisible
+        
+
+        System.out.println("End of main thread");   
+
+    }
+}
